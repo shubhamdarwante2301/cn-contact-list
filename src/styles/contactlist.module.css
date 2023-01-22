@@ -1,0 +1,45 @@
+/* heading for contact list */
+.headingWrapper {
+    background-color: black;
+    color: #fff;
+    margin-top: 3rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+}
+.headingWrapper > div {
+    flex: 1;
+}
+.contactListContainer {
+    margin: 0 3rem;
+}
+/* for every contact */
+.contactWrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+.contactWrapper:hover {
+    background-color: lightgrey;
+}
+.contactWrapper > div {
+    flex: 1;
+}
+.editBtn {
+    background-color: black;
+    color: white;
+    padding: 0.2rem 0.6rem;
+    margin-right: 0.5rem;
+    text-decoration: none;
+    border-radius: 0.2rem;
+}
+.deleteBtn {
+    background-color: red;
+    color: white;
+    padding: 0.3rem 0.5rem;
+}

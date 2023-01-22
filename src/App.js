@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { useReducer, useEffect, useState } from "react";
+import { Routes, Route } from "react-router";
+
+import reducer from "./utils/reducer";
+import ContactList from "./component/ContactList";
+import EditContact from "./component/EditContact";
+import Navbar from "./component/Navbar";
+import fetchContact from "./utils/fetchContact";
+import AddNewContact from "./component/AddNewContact";
 
 function App() {
+  const [state, dispatch] = useReducer(reducer, []);
+  const [editContact, setEditContact] = useState({});
+
+  // fetch contact when app loads
+  useEffect(() => {
+    fetchContact(dispatch);
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <Routes>
+        <Route
+          path="/"
+          element={<ContactList contactList={state}setEditContact={setEditContact} dispatch={dispatch} />}
+        />
+        <Route
+          path="/editcontact"
+          element={
+            <EditContact editContact={editContact} dispatch={dispatch} />
+          }
+        />
+        <Route path="/addnewcontact" element={<AddNewContact contactList={state} dispatch={dispatch}/>}></Route>
+      </Routes>
     </div>
   );
 }
