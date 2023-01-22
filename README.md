@@ -1,3 +1,22 @@
+# CONTACT LIST APP
+
+## Description 
+
+This project is built using ReactJS and allows users to add, edit, and delete contacts.
+
+github repo: Open [contact list](https://github.com/shubhamdarwante2301/cn-contact-list)
+
+live hosted link: [contact-list-project](https://cn-contact-list.netlify.app/)
+
+
+## Functionality
+
+1 ) Add new contact
+
+2 ) Delete existing contact
+
+3 ) Edit existing contact
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
